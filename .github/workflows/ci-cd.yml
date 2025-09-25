@@ -16,7 +16,9 @@ jobs:
     steps:
       - name: Checkout código da aplicação
         uses: actions/checkout@v3
-
+        with:
+          repository: Dasko7b/manifests
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }
       - name: Login no Docker Hub
         uses: docker/login-action@v2
         with:
